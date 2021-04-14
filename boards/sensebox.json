@@ -1,0 +1,51 @@
+{
+	"build": {
+		"arduino": {
+			"ldscript": "flash_with_bootloader.ld"
+		},
+		"core": "arduino",
+		"extra_flags": "-D__SAMD21G18A__",
+		"cpu": "cortex-m0plus",
+		"f_cpu": "48000000L",
+		"hwids": [
+		  [
+			"0x04D8",
+			"0xEF66"
+		  ],
+		  [
+			"0x04D8",
+			"0xEF67"
+		  ]
+		],
+		"mcu": "samd21g18a",
+		"system": "samd",
+		"usb_product": "senseBox MCU",
+		"variant": "sensebox_mcu"
+	  },
+	  "debug": {
+		"jlink_device": "ATSAMD21G18",
+		"openocd_chipname": "at91samd21g18",
+		"svd_path": "ATSAMD21G18A.svd"
+	  },
+	  "frameworks": ["arduino"],
+	  "name": "senseBox MCU",
+	  "upload": {
+		"disable_flushing": true,
+		"maximum_ram_size": 32768,
+		"maximum_size": 262144,
+		"native_usb": true,
+		"protocol": "sam-ba",
+		"protocols": [
+			"sam-ba",
+			"blackmagic",
+			"jlink",
+			"atmel-ice"
+		],
+		"require_upload_port": true,
+		"offset_address": "0x2000",
+		"use_1200bps_touch": true,
+		"wait_for_upload_port": true
+	  },
+	  "url": "https://sensebox.de/",
+	  "vendor": "senseBox"
+}

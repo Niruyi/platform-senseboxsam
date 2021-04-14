@@ -29,13 +29,8 @@ from SCons.Script import DefaultEnvironment
 env = DefaultEnvironment()
 platform = env.PioPlatform()
 board = env.BoardConfig()
-build_mcu = env.get("BOARD_MCU", board.get("build.mcu", ""))
 
-MCU_FAMILY = board.get(
-    "build.system", "sam" if build_mcu.startswith("at91") else "samd")
-assert MCU_FAMILY in ("sam", "samd")
-
-framework_package = "framework-arduino-" + MCU_FAMILY
+framework_package = "framework-arduino-sensebox"
 if board.get("build.core", "").lower() != "arduino":
     framework_package += "-%s" % board.get("build.core").lower()
 FRAMEWORK_DIR = platform.get_package_dir(framework_package)

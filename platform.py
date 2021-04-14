@@ -19,7 +19,7 @@ from platformio.managers.platform import PlatformBase
 from platformio.util import get_systype
 
 
-class AtmelsamPlatform(PlatformBase):
+class SenseboxPlatform(PlatformBase):
 
     def configure_default_packages(self, variables, targets):
         if not variables.get("board"):
@@ -51,8 +51,7 @@ class AtmelsamPlatform(PlatformBase):
                 "build.core", "arduino")).lower()
 
         if "arduino" in variables.get("pioframework", []):
-            framework_package = "framework-arduino-%s" % (
-                "sam" if board.get("build.mcu", "").startswith("at91") else "samd")
+            framework_package = "framework-arduino-sensebox"
 
             if build_core != "arduino":
                 framework_package += "-" + build_core
@@ -68,12 +67,6 @@ class AtmelsamPlatform(PlatformBase):
                 self.packages[framework_package]["optional"] = False
             self.packages["framework-cmsis"]["optional"] = False
             self.packages["framework-cmsis-atmel"]["optional"] = False
-            if build_core in ("sodaq", "tuino0", "reprap"):
-                self.packages["framework-cmsis-atmel"]["version"] = "~1.1.0"
-            if build_core == "adafruit":
-                self.packages["toolchain-gccarmnoneeabi"]["version"] = "~1.90301.0"
-            if build_core in ("adafruit", "seeed"):
-                self.packages["framework-cmsis"]["version"] = "~2.50400.0"
 
         if "mbed" in variables.get("pioframework", []):
             self.packages["toolchain-gccarmnoneeabi"][

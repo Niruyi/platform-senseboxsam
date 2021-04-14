@@ -1,6 +1,6 @@
 {
-  "name": "atmelsam",
-  "title": "Atmel SAM",
+  "name": "sensebox",
+  "title": "sensebox (Atmel SAM)",
   "description": "Atmel | SMART offers Flash- based ARM products based on the ARM Cortex-M0+, Cortex-M3 and Cortex-M4 architectures, ranging from 8KB to 2MB of Flash including a rich peripheral and feature mix.",
   "homepage": "https://www.microchip.com/design-centers/32-bit",
   "license": "Apache-2.0",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/platformio/platform-atmelsam.git"
+    "url": "https://github.com/Niruyi/platform-sensebox.git"
   },
   "version": "6.0.1",
   "frameworks": {
@@ -51,59 +51,11 @@
         "~1.90301.0"
       ]
     },
-    "framework-arduino-sam": {
+    "framework-arduino-sensebox": {
       "type": "framework",
       "optional": true,
-      "owner": "platformio",
-      "version": "~1.6.12"
-    },
-    "framework-arduino-samd": {
-      "type": "framework",
-      "optional": true,
-      "owner": "platformio",
-      "version": "~1.8.11"
-    },
-    "framework-arduino-samd-adafruit": {
-      "type": "framework",
-      "optional": true,
-      "owner": "platformio",
-      "version": "~1.6.5"
-    },
-    "framework-arduino-samd-seeed": {
-      "type": "framework",
-      "optional": true,
-      "owner": "platformio",
-      "version": "~1.8.1"
-    },
-    "framework-arduino-samd-moteino": {
-      "type": "framework",
-      "optional": true,
-      "owner": "platformio",
-      "version": "~1.5.0"
-    },
-    "framework-arduino-samd-reprap": {
-      "type": "framework",
-      "optional": true,
-      "owner": "platformio",
-      "version": "~1.0.2"
-    },
-    "framework-arduino-samd-sodaq": {
-      "type": "framework",
-      "optional": true,
-      "owner": "platformio",
-      "version": "~1.6.20"
-    },
-    "framework-arduino-samd-sparkfun": {
-      "type": "framework",
-      "optional": true,
-      "owner": "platformio",
-      "version": "~1.7.5"
-    },
-    "framework-arduino-samd-tuino0": {
-      "type": "framework",
-      "optional": true,
-      "owner": "platformio",
-      "version": "~1.0.6"
+      "owner": "sensebox",
+      "version": "https://github.com/Niruyi/framework-arduino-sensebox.git"
     },
     "framework-cmsis": {
       "type": "framework",

@@ -1,8 +1,8 @@
-# Atmel SAM: development platform for [PlatformIO](http://platformio.org)
+# senseBox (Atmel SAM): development platform for [PlatformIO](http://platformio.org)
 
-[![Build Status](https://github.com/platformio/platform-atmelsam/workflows/Examples/badge.svg)](https://github.com/platformio/platform-atmelsam/actions)
+[![Build Status](https://github.com/platformio/platform-atmelsam/workflows/Examples/badge.svg)](https://github.com/Niruyi/platform-senseboxsam/actions)
 
-Atmel | SMART offers Flash- based ARM products based on the ARM Cortex-M0+, Cortex-M3 and Cortex-M4 architectures, ranging from 8KB to 2MB of Flash including a rich peripheral and feature mix.
+Provides support for the senseBox, which is based on Atmel SAM.
 
 * [Home](http://platformio.org/platforms/atmelsam) (home page in PlatformIO Platform Registry)
 * [Documentation](http://docs.platformio.org/page/platforms/atmelsam.html) (advanced usage, packages, boards, frameworks, etc.)
@@ -16,8 +16,8 @@ Atmel | SMART offers Flash- based ARM products based on the ARM Cortex-M0+, Cort
 
 ```ini
 [env:stable]
-platform = atmelsam
-board = ...
+platform = https://github.com/Niruyi/platform-sensebox.git
+board = sensebox
 ...
 ```
 
@@ -25,7 +25,7 @@ board = ...
 
 ```ini
 [env:development]
-platform = https://github.com/platformio/platform-atmelsam.git
+platform = https://github.com/Niruyi/platform-sensebox.git
 board = ...
 ...
 ```
